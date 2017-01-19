@@ -28,18 +28,17 @@
  ## Centralised vs Distributed VCs
  
 ## How to install
-     ##Use commnd sudo apt-get install git
+     Use commnd sudo apt-get install git
      
-  ##Goal achieved : Installation and configuration of Git.git version 2.7.4
+  ## Goal achieved : Installation and configuration of Git.git version 2.7.4
 
 
-##Git Local Operations
- -------------------------
+## Git Local Operations
 
-  1 Configure and initialize git
-  2 Add files to staging area using git add
-  3 Commit changes - git commit -m "your message content"
-  4 Check status - git status : list files which are staged,unstaged and untracked.
-  5 View difference
-  6 View log
+  ## 1 Configure and initialize git
+  ## 2 Add files to staging area using git add
+  ## 3 Commit changes - git commit -m "your message content"
+  ## 4 Check status - git status : list files which are staged,unstaged and untracked.
+  ## 5 View difference
+  ## 6 View log
 
