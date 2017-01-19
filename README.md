@@ -1,14 +1,18 @@
-# Basics of Git
-If you are beginner to DevOps then it is required to know basics of GitHub and Docker.
+# Getting Started : Git 
+   If you are beginner to DevOps then it is required to know basics of GitHub and Docker.
+   Lets first go with basics of Git and various operations in Git.
+   Then will go with the basics of Docker
  
-#Git 
 
- 1. What is Version control system?
+## Basics of Git
+
+ ## What is Version control system?
  
-     -maintains versions of code or document,each time when it is modified.
-     -Example : CVS(Concurrent-Versions-System),Subversion --> centralised version control
-      Mercurial and Git are distributed ---> version control
-
+     ```-maintains versions of code or document,each time when it is modified
+        -Example : CVS(Concurrent-Versions-System),Subversion --> centralised version control
+                   Mercurial and Git are distributed ---> version control
+    ```
+		
  2. Why to use git?
      -Developer collabration,improve agility and communication
      -keeps real time back up
