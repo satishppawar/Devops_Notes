@@ -35,10 +35,10 @@
 
 ## Git Local Operations
 
-  # 1 Configure and initialize git
-  # 2 Add files to staging area using git add
-  # 3 Commit changes - git commit -m "your message content"
-  # 4 Check status - git status : list files which are staged,unstaged and untracked.
-  # 5 View difference
-  # 6 View log
+  1 Configure and initialize git
+  2 Add files to staging area using git add
+  3 Commit changes - git commit -m "your message content"
+  4 Check status - git status : list files which are staged,unstaged and untracked.
+  5 View difference
+  6 View log
 
