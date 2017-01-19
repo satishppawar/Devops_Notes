@@ -1,5 +1,5 @@
 # Devops_Notes
-If you are beginner then it is required to know basics of GitHub and Docker.
+If you are beginner to DevOps then it is required to know basics of GitHub and Docker.
 
 Git 
 ==========
