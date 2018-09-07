@@ -1,0 +1,12 @@
+Branching, Merging, and Rebasing with Git 
+=============================================
+Objective
+---------------
+1. Working with local branches
+2. Stashing chnages
+3. Merging the branches
+4. rebasing the commits
+5. Cherry-picking commits
+6. Working with remote branches
+
+==========================================================

@@ -1,0 +1,228 @@
+C] Working with git remotely
+	-> Cloning a remote repo
+	-> Basic Repository Statistics
+	-> Viewing Commits
+	-> Git Protocols
+	-> Viewing Branches and Tags
+	-> Fetching from a Remote
+	-> Pulling from a Remote
+	-> Pushing to a Remote
+	   Creating and Verifying Tags
+	Pushing Tags to a Remote
+
+=========================================================
+Cloning a remote repo
+------------------------------
+1. git clone <clone url>
+ git log
+git log 
+
+=============================================
+Basic Repository Statistics
+--------------------------------
+1. Getting the count of commits
+	git log --oneline | wc -l
+
+2. git log --oneline --graph
+
+3. git shortlog 
+   git --format=short
+
+4. git shortlog -sne
+   -s : summary
+   -n : no of commit in decreasing
+   -e : email 
+
+5. Looking on Webpages
+	- Graphs
+
+=============================================================
+ Viewing Commits
+------------------------------------------
+1. Look at head
+	git show HEAD
+
+2. git show HEAD~1
+   git log --oneline
+
+3. git remote
+	-> origin : it is git source default name
+
+4. git remote -v
+
+=========================================================
+Git Protocols
+--------------------------------------------
+  protocol   port   Example                                  Note
+
+ 
+1) http(s)   80/443  https://github.com/jquery/jquery.git    -> R/W password for auth
+							     -> Firewall friendly
+							     -> Well known port
+	                                                     
+
+2) git 	      9418   git://github.com/jquery/jquery.git      -> Not Firewall friendly and not well know port
+							     -> Need to manually open the port
+							     -> read only and anonymous only
+
+
+3) ssh 	     22     git@github.com:jquery/jquery.git	     -> Read only
+							     -> need ssh keys for auth
+
+4) file      NA	    users/satish/code/jquery 		     -> Read only 
+							     -> Local only
+
+
+5) Listing the directory content 
+	cat .git/config
+
+
+=======================================================================
+Viewing Branches and Tags
+---------------------------------
+Branches 
+	-> used as temporary working copy
+
+Tags 
+	-> code stable point for versioning
+
+
+1) Git local branch
+	git branch
+
+2) git remote branch
+	git branch -r
+
+===========================================================================
+Fetching from a Remote
+-----------------------------
+1) git log
+
+2) git remote -v
+   -> local repo initially does not have any remote associated with it 
+   -> This means our local repo does not communicate with any remote 
+
+3) Adding a remote to local repo
+	git remote add origin https://github.com/sam/GitFundamentals.git
+
+git fetch
+
+git fetch origin
+
+git log
+
+git merge origin/master
+
+==========================================================================
+Pulling from a Remote
+----------------------------------
+1. git branch -r
+	remote branch
+
+2. git fetch; git merge origin/master
+
+3. git pull
+	-> same as 2
+
+4. Setting .git/config or set upstream
+	git branch --set-upstream master origin/master
+
+	git pull
+
+=======================================================================
+Pushing to a Remote
+------------------------------------------
+1. Update readme.txt
+
+2. git status
+   git -am "sharing is easy"
+   git status
+
+
+
+3. git push
+	-> need git username
+	-> need git password
+
+4. To avoid the username and password
+   a) remove the remote origin 
+	git remote rm origin
+   
+   b) add git ssh version so that ssh key is used for auth
+      	git remote add origin git@github.com:JamesKovacs/GitFundamentals
+
+   C) git push
+
+
+===========================================================================
+Creating and Verifying Tags
+----------------------------------------
+Tags 
+	-> code stable point for versioning
+
+1) Tagging the repo
+	git tag V1.0
+2) git tag
+
+3) Branching from tag
+	git log
+       git tag -a v1.0_withMessage
+       provide message
+
+4) Sigining the tag 
+   git -s v1.0_signed 
+      eneter the message
+
+5) git tag
+
+6) Verifying the unsinged tag
+   	git tag -v <tag_name>
+		-> verify the gpg signature for official tag
+
+===========================================================================
+Pushing Tags to a Remote
+---------------------------------------------
+1) git push
+	-> go to web view of repo and look code option
+	-> git by default does not provide push for tags
+
+2) git push --tags
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=================================================
+Points to remember
+===================================================
+1. The setting, core.autocrlf, configures:conversion of line endings between the repository and working copy.
+
+2. Cherry-picking a commit will:apply only that commit to the current branch.
+
+3. Given an unmerged feature branch, feature1, what is the effect of running "git branch -d feature1"?
+	feature1 will not be deleted and an error message will be displayed
+
+4. User-level configuration in Git can be modified using:
+	git config --global
+
+5. Performing a git pull is equivalent to a git fetch followed by:
+	git merge
+
+6. To remove and discard the changes from the last commit on your current branch, you should use:
+	git reset --hard HEAD~1
+
+7. Which URL style should you use if you want to avoid using passwords?
+	git@github.com:username/repository.git
+
+8. 

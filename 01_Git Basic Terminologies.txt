@@ -1,0 +1,75 @@
+Git Basics Terminologies.txt
+
+1 ==> https://linuxacademy.com/blog/linux/git-terms-explained/#branch
+2 ==> https://juristr.com/blog/2013/04/git-explained/
+-----------------------------------------------------------------
+Repository (“Repo”) :- a directory that stores all the files, folders, and content needed for your project. 
+
+1) Branch :- Diversion from main workinfg project (repository)
+
+2) Checkout :- used to switch within the branches
+	syntax : git checkout < branch-name>
+		 git checkout master
+		 git checkout testing 
+
+	NOTE :  Be careful with your staged files and commits 
+		when switching between branches.
+
+
+3)  Clone :- copying a repository
+	After cloning a repo into another branch, the newly created becomes
+	a remote-tracking branch that can talk upstream to its origin branch
+	( via pushes, pulls, and fetches )
+
+4) Fetch :-
+	By performing a Git fetch, you are downloading and copying 
+	that branch’s files to your workstation. 
+	Multiple branches can be fetched at once. 
+
+5) Fork	:- Creates a copy of a repository.
+	a project fork is the copying of a project with the purpose
+	 of creating a new and separate community around it.
+
+6) HEAD	:- 
+	HEAD is a reference variable used to denote the most current commit of
+	the repository in which you are working.
+ 	When you add a new commit, HEAD will then become that new commit.
+
+7) Index :- working or staging area of the git
+
+	changes file <------->  Staging area  <---------------> Commited
+	<add,delete etc. >	green files
+				{staged and ready to commit}
+				
+				red files
+				{ 
+					have not yet been added 
+				  	to staged for next commit
+				}
+
+8) Master :- The primary branch of all repositories on local system
+	
+	All committed and accepted changes should be on the master branch.
+	You can work directly from the master branch, or create other branches.
+
+9) Pull/Pull Request :- to review the commits made.
+
+	If someone has changed code on a separate branch of a project 
+	and wants it to be reviewed to add to the master branch, 
+	that someone can put in a pull request.
+
+	Pull requests ask the repo maintainers to review the commits made, 
+	and then, if acceptable, merge the changes upstream. 
+
+	A pull happens when adding the changes to the master branch.
+
+10)Push :- Updates a remote branch with the commits made to the current branch. 
+	   You are literally “pushing” your changes onto the remote.
+
+
+11) Merge :- Taking the changes from one branch and adding them into another (traditionally master) branch. 
+	    These commits are usually first requested via pull request before being merged by a project maintainer.
+	
+12) Origin : origin is the default alias to the URL of your remote repository.
+	     You can see what URL belongs to each remote by using
+	     e.g. git remote -v
