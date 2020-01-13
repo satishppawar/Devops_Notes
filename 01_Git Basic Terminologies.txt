@@ -1,5 +1,5 @@
 Git Basics Terminologies.txt
-
+------
 1 ==> https://linuxacademy.com/blog/linux/git-terms-explained/#branch
 2 ==> https://juristr.com/blog/2013/04/git-explained/
 -----------------------------------------------------------------
