@@ -14,9 +14,9 @@ B) WORKING LOCALLY WITH GIT
 - Cleaning working copy
 - ignoring files with .gitignore
 
------
+-------
 
-A) GIT CONFIGURATION
+A)GIT CONFIGURATION
   
 1. System Level
 > git config --system & /etc/gitconfig
