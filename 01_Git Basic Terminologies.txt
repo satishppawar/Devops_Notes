@@ -1,9 +1,12 @@
-Git Basics Terminologies.txt
+# Git Basics Terminologies
 ------
-1 ==> https://linuxacademy.com/blog/linux/git-terms-explained/#branch
-2 ==> https://juristr.com/blog/2013/04/git-explained/
------------------------------------------------------------------
-Repository (ìRepoî) :- a directory that stores all the files, folders, and content needed for your project. 
+> References
+1. https://linuxacademy.com/blog/linux/git-terms-explained/#branch
+2. https://juristr.com/blog/2013/04/git-explained/
+
+---
+
+Repository (‚ÄúRepo‚Äù) :- a directory that stores all the files, folders, and content needed for your project. 
 
 1) Branch :- Diversion from main workinfg project (repository)
 
@@ -23,7 +26,7 @@ Repository (ìRepoî) :- a directory that stores all the files, folders, and conte
 
 4) Fetch :-
 	By performing a Git fetch, you are downloading and copying 
-	that branchís files to your workstation. 
+	that branch‚Äôs files to your workstation. 
 	Multiple branches can be fetched at once. 
 
 5) Fork	:- Creates a copy of a repository.
@@ -64,7 +67,7 @@ Repository (ìRepoî) :- a directory that stores all the files, folders, and conte
 	A pull happens when adding the changes to the master branch.
 
 10)Push :- Updates a remote branch with the commits made to the current branch. 
-	   You are literally ìpushingî your changes onto the remote.
+	   You are literally ‚Äúpushing‚Äù your changes onto the remote.
 
 
 11) Merge :- Taking the changes from one branch and adding them into another (traditionally master) branch. 
