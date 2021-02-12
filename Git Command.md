@@ -1,8 +1,6 @@
 # CONTENTS
---------------
 
 A) GIT CONFIGURATION
-
 B) WORKING LOCALLY WITH GIT
 - creating local repo
 - Adding files
@@ -13,8 +11,8 @@ B) WORKING LOCALLY WITH GIT
 - Deleting files
 - Cleaning working copy
 - ignoring files with .gitignore
-
 -------
+
 
 A) GIT CONFIGURATION
   
@@ -217,20 +215,15 @@ git status
 -----
 ### Undoing/redoing changes in the repository
 -------------------------------------------
+```
 git log
-
 git rest --soft HEAD~1
-
 git status
-
 git commit -m "Reorganised files for feature"
-
 git log
-
 git reset --hard HEAD~1
-
 git status
-
+```
 
 -----
 ### Cleaning the working copy
