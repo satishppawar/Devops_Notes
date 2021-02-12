@@ -80,25 +80,28 @@ B) WORKING LOCALLY WITH GIT
 > git init
 
 2. Adding files to git staging
+
 ```
-	ls -la
-	echo "Hello,Git" > readme.txt
-	git status
- 	git add readme.txt
-	git status
+ls -la
+echo "Hello,Git" > readme.txt
+git status
+git add readme.txt
+git status
 ```
 
 3. Commit the changes
- 	`git commit`
+
+ `git commit`
 
 4. git log
 
 5. Update file readme.txt by Adding 2nd line as hello again
 	
 6. Updated changes to the file in git repository only
+
 ```
-	git add -u #not valid for adding new file from staging area to git repo
-	git status
+git add -u #not valid for adding new file from staging area to git repo
+git status
 
 ```
 
@@ -111,9 +114,9 @@ B) WORKING LOCALLY WITH GIT
 2. Usinfg git diff
 
 ```
-	git diff <latter commit>..<recent commit>
-	git diff HEAD~1..HEAD
-	git diff HEAD~1  (2nd commit is referred as HEAD by default)
+git diff <latter commit>..<recent commit>
+git diff HEAD~1..HEAD
+git diff HEAD~1  (2nd commit is referred as HEAD by default)
 ```
 
 3. LATEST commit is referred as HEAD in git
@@ -121,8 +124,8 @@ B) WORKING LOCALLY WITH GIT
 
 4. Adding All files
 ```
-	git add -A
-	git commit -m "Added cool new feature"
+git add -A
+git commit -m "Added cool new feature"
 
 ```
 
@@ -147,62 +150,66 @@ git commit -m "Fixed typo in readme.txt added additional information about other
 1. Remove file from disk
 
 ```
-	rm file2.txt
-	git status
+rm file2.txt
+git status
 ````
 
 2. Staging removed files
+
 ```
-	git add -u
-	git status
+git add -u
+git status
 ```
 
 3. Perform another operations
+
 ```
-	git add file3.txt
-	git status
+git add file3.txt
+git status
 ```
 
 4. Rename the file
+
 ```
-	mv file1.txt new_file_name.txt
-	git status
-	git add -A
-	git commit -m "reorganized the feature"
-	git log
+mv file1.txt new_file_name.txt
+git status
+git add -A
+git commit -m "reorganized the feature"
+git log
 ```
 
 ----
 ### Undoing changes to the working copy
 ---------------------------------------
 1. Open readme.txt and delete everything from it
+
 ```
-	git status
+git status
 ```
 
 2. to undo deleted changes checkout changes from repo
 
 ```
-	git checkout readme.txt
-	git status
-	cat readme.txt
+git checkout readme.txt
+git status
+cat readme.txt
 ```
 
 3. Open readme.txt and delete eveything from it
 
 ```
-   remove new_file_name.txt
-	vim readme.txt
-	rm new_file_name.txt
-	git status
+remove new_file_name.txt
+vim readme.txt
+rm new_file_name.txt
+git status
 
 ```
 
 4. performing git reset to redo on multiple changes
 
 ```
-	git reset --hard
-	git status
+git reset --hard
+git status
 
 ```
 
@@ -230,16 +237,16 @@ git status
 1. Create a temp files
 
 ```
-	touch temp1.txt temp2.txt
-	git status
+touch temp1.txt temp2.txt
+git status
 ```
 
 2. clear new files
 
 ```
-	git clean -n
-	git clean -f
-	git status
+git clean -n
+git clean -f
+git status
 ```
 
 -----
@@ -249,9 +256,9 @@ git status
 1. Consider that you have a log directory
 
 ```
-	mkdir logs
-	touch logs/log.txt
-	git status
+mkdir logs
+touch logs/log.txt
+git status
 ```
 
 
@@ -260,16 +267,16 @@ git status
 3. create a gitignore and add entries of files to be ignores
 
 ```
-	vim .gitignore
-	/log/*txt
+vim .gitignore
+/log/*txt
 
 ```
 
 4. Commit gitignore
 
 ```
-	git add .gitignore
-	git commit -m "Added .gitignore"
+git add .gitignore
+git commit -m "Added .gitignore"
 ```
 
 > Happy Learning :)
