@@ -97,7 +97,7 @@ $echo 'test content'| git hash-object -w --stdin
 
 ----
 
-GIT First Time Set Up
+# GIT First Time Set Up
 -------------------------
 git config :- This is utility used for git configuration
 
@@ -113,31 +113,26 @@ git config :- This is utility used for git configuration
 	
 	COMMAND :- git config --local
 
-=============================================
-Your Identity configuration
+-----
+## Your Identity configuration
 -----------------------------
 COMMANDS:
 	1. $git config --global user.name "<userName>"
 	2. $git config --global user.email <emailId>
 
-NOTE:
-	1. you need to do this only once if you pass the --global option, 
-	   because then Git will always use that information for anything you do on that system.
-	   If you want to override this with a different name or email address for specific projects, 
-	 you can run the command without the --global option when you’re in that project.
+> NOTE:you need to do this only once if you pass the --global option, because then Git will always use that information for anything you do on that system.If you want to override this with a different name or email address for specific projects,  you can run the command without the --global option when you’re in that project.
 
-========================================
-Your Editor
+
+## Your Editor
 -------------------
 $git config --global core.editor 
 
-========================================
-Checking Your Settings
+## Checking Your Settings
 -----------------------------
 $git config --list
 
+------
 	 
-=================================================================
 2.1 Git Basics - Getting a Git Repository
 ==========================================
 Contents
