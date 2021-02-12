@@ -1,47 +1,44 @@
-﻿Git Basics.txt
-2 ==> https://juristr.com/blog/2013/04/git-explained/
------------------------------------------------------------------
--> Git stores everything in its database not by file name but by the hash value of its contents.
--> Git has three main states that your files can reside in: committed, modified, and staged:
-	Committed means that the data is safely stored in your local database.
+# ﻿Git Basics
 
-	Modified means that you have changed the file but have not committed it to your database yet.
+Reference ==> https://juristr.com/blog/2013/04/git-explained/
+---------------------
+1) Introduction
+* Git stores everything in its database not by file name but by the hash value of its contents.
+* Git has three main states that your files can reside in: `committed, modified, and staged:`
+> Committed means that the data is safely stored in your local database. </br>
+> Modified means that you have changed the file but have not committed it to your database yet.</br>
+> Staged means that you have marked a modified file in its current version to go into your next commit snapshot.</br>
 
-	Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
-	
 	Working Directory <=======> Staging Area <========> Git Directory
-	
-	Git directory is where Git stores the metadata and object database for your project
-	
-	The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.
 
-	The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.
+* Git directory is where Git stores the metadata and object database for your project
+	
+* The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.
 
------------------------------
+* The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.
+
+---------
 2) Git Data structure 
------------------------------
-	- Git uses trees and blobs with Key-Value pairs. 
-	
-	------------------------------------	
-	A) Git Internals - Git Objects
-	-------------------------------------
-		-Git is a content-addressable filesystem. 
-		- at the core of Git is a simple key-value data store. 
-		- on insert operation Git will hand you back a unique key you can use later to retrieve that content.
-		- COMMANDS
-			
-			$git init test
-			$cd test
-			$find .git/objects
 
-			$find .git/objects -type f
-			
-			$echo 'test content'| git hash-object -w --stdin
-		
-			--> git hash-object Git will hand you back a unique key you can use later to retrieve that content.
-			--> The -w option then tells the command to not simply return the key, but to write that object to the database. 
-			--> Finally, the --stdin option tells git hash-object to get the content to be processed from stdin; 
-		    	    otherwise, the command would expect a filename argument at the end of the command containing the content to be used. 				
+- Git uses trees and blobs with Key-Value pairs. 
+
+A) Git Internals - Git Objects
+-------------------
+- Git is a content-addressable filesystem. 
+- at the core of Git is a simple key-value data store. 
+- on insert operation Git will hand you back a unique key you can use later to retrieve that content.
+- COMMANDS	
+
+```$git init test
+$cd test
+$find .git/objects
+$find .git/objects -type f
+$echo 'test content'| git hash-object -w --stdin
+```
+
+- git hash-object Git will hand you back a unique key you can use later to retrieve that content.
+> The -w option then tells the command to not simply return the key, but to write that object to the database. 
+> Finally, the --stdin option tells git hash-object to get the content to be processed from stdin; otherwise, the command would expect a filename argument at the end of the command containing the content to be used. 				
 		
 		COMMANDS
 		-------------
@@ -98,7 +95,8 @@
 	
 	- A single tree object contains one or more tree entries, each of which contains a SHA-1 pointer to a blob or subtree with its associated mode, type, and filename.
 
-=================================================================
+----
+
 GIT First Time Set Up
 -------------------------
 git config :- This is utility used for git configuration
