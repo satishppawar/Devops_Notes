@@ -16,7 +16,7 @@ B) WORKING LOCALLY WITH GIT
 
 -------
 
-A)GIT CONFIGURATION
+A) GIT CONFIGURATION
   
 1. System Level
 > git config --system & /etc/gitconfig
