@@ -1,53 +1,47 @@
 CONTENTS
 --------------
-A] GIT CONFIGURATION
-B] WORKING LOCALLY WITH GIT
-	-> creating local repo
-	-> Adding files
-	-> commiting changes
-	-> Viewing history
-	-> Viewing a diff
-	-> Working copy, staging and repository
-	-> Deleting files
-	-> Cleaning working copy
-	-> ignoring files with .gitignore
+A) GIT CONFIGURATION
 
+B) WORKING LOCALLY WITH GIT
+- creating local repo
+- Adding files
+- commiting changes
+- Viewing history
+- Viewing a diff
+- Working copy, staging and repository
+- Deleting files
+- Cleaning working copy
+- ignoring files with .gitignore
 
+-----
 
-
-
-
-
-
-A] GIT CONFIGURATION
+A) GIT CONFIGURATION
   
- 1. System Level
-	git config --system & /etc/gitconfig
+1. System Level
+> git config --system & /etc/gitconfig
 
-   2. User level
-	git config --global
-	located in ~/.gitconfig
+2. User level
+> git config --global #located in ~/.gitconfig
 
-  3. Repository level
-	git config
-	located in .git
+3. Repository level
+> git config #located in .git
 
+4. git config --global --list
 
-================================
+5. git config --global user.name "Sam"
 
-git config --global --list
-git config --global user.name "Sam"
-git config --global user.email "pawar.satish2345@gmail.com"
+6. git config --global user.email "pawar.satish2345@gmail.com"
 
-git config --global --list
+7. git config --global --list
 
-git config --global help.autocorrect 1
--> performs the autocorrect option on git
+8. git config --global help.autocorrect 1
+> performs the autocorrect option on git
 
-git config --global color.ui auto
+9. git config --global color.ui auto
 
-git config --global core.autocrlf 
-autocrlf -> carrier return line feed. 3 values
+10. git config --global core.autocrlf 
+
+> autocrlf -> carrier return line feed. 3 values
 		true (Use for windows) -> CRLF(Windows) to SLF (Repository) on text files
 		false (Windows only)-> not used with cross plaforms.Uses CRLF only
 		input (Linux and Mac)-> Convert CRLF
@@ -56,15 +50,14 @@ autocrlf -> carrier return line feed. 3 values
 git config --global --list
 or cat ~/.gitconfig
 
-==================================================
-Note :- User level settings overwrite the System level config
+> Note :- User level settings overwrite the System level config
 	and repository level settings overwrite the User level config
 
 git config user.name "Sam"
 git config --list
 
+-----
 
-=====================================================
 Unsetting the config
 =================================
 
