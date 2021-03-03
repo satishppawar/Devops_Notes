@@ -10,6 +10,9 @@ RUN rm -rf ./webapps/*
 #COPY images
 COPY target/fleetman-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
 
+#settting Spring profile 
 ENV JAVA_OPTS="-Dspring.profiles.active=docker-demo"
+
+RUN echo -e  "JAVA_OPTS is" $JAVA_OPTS
 
 CMD ["catalina.sh", "run"]
