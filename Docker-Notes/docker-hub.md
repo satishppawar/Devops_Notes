@@ -16,4 +16,4 @@
 
 3. Docker push
 
-> docker image psuh pawarsatish/test
+> docker image push pawarsatish/test
