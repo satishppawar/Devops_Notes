@@ -1,4 +1,4 @@
-# Docker Images
+# Docker Images and instruction
 
 ## Basic Docker image
 
@@ -112,3 +112,8 @@ CMD ["java", "-jar", "test-program.jar"]
 ```
 > EXECUTE COMMAND
 >> docker build  -t docker-label-image -f Dockerfile-label .
+
+---
+### EXPOSE instruction
+
+- specify/informs docker that container listens on the specified network ports at runtime.
