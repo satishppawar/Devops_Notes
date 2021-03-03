@@ -10,16 +10,39 @@ It is the used to specify the base image
 
 It is used to run a command into docker container
 
-> 
+> Create Dockerfile-base
 
 ```code docker
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y openjdk-8-jdk
+CMD ["/bin/bash"]
+```
+> EXECUTE COMMAND docker build --no-cache -t base-image -f Dockerfile-base .
 
-MAINTAINER satish pawar
+----
+## COPY command demo
 
-FROM ubuntu: latest
+> Create Dockerfile-jdk
+
+```
+FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y openjdk-8-jdk
 
-CMD ["/bin/bash"]
+WORKDIR /usr/local/bin/
 
+COPY ../handsOn/test-program.jar .
+
+ENTRYPOINT ["java", "-jar", "test-program.jar"]
 ```
+
+> EXECUTE COMMAND - docker build --no-cache -t jdk-image -f Dockerfile-jdk .
+
+>> --no-cache do not use layers from previous image 
+
+> EXECUTE COMMAND - docker build  -t jdk-image -f Dockerfile-jdk .
+
+>  EXECUTE COMMAND - docker run -it jdk-image
+
+---
+
