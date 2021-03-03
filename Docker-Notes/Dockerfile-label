@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+LABEL version="1.0"
+LABEL maintainer="Satish"
+LABEL date="02.03.2021"
+LABEL key="value"
+RUN apt-get update && apt-get install -y openjdk-8-jdk
+WORKDIR /usr/local/bin/
+COPY test-program.jar .
+CMD ["java", "-jar", "test-program.jar"]
